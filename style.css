@@ -1,0 +1,237 @@
+*{
+box-sizing: border-box;
+margin: 0%;
+width: 100%;
+height: 100%;
+transition: 1s;
+font-family:"Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
+}
+body{
+    background-color: rgb(232, 236, 240);
+}
+.box{
+    left: 35%;
+    top: 25%;
+    width: 500px;
+    height: auto;
+    position: relative;
+    background-color: white;
+    box-shadow: 5px 5px 5px 2px rgb(184, 183, 183),2px 2px 2px 2px gray;
+    border-radius: 10px;
+    float: left;
+}
+.text{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 80%;
+    height: 60%;
+    float: left;
+    background-color:rgb(233, 233, 233);
+    border: 0px;
+    outline: none;
+    font-size: 25px;
+    color: black;
+    
+}
+.add{
+	display: none;
+    width: 10%;
+    padding: 10px;
+    height: 100%;
+    float: left;
+}
+.listi{
+	display: block;
+    width: 10%;
+    height: 100%;
+    float: left;
+}
+.tool{
+    border-radius: 5px;
+    text-align: center;
+    position: relative;
+    margin-top: 10px;
+	margin-bottom: 10px;
+    margin-left: 13px;
+    margin-right: 10px;
+    background-color:rgb(233, 233, 233);
+    width: 95%;
+    height: 50px;
+    float: left;
+}
+
+
+.tap{
+width: 100%;
+height: 50px;
+float: left;
+}
+.all{
+width: 95%;
+background-color: white;
+	height: auto;
+	float: left;
+	margin-left: 13px;
+    margin-right: 10px;
+}
+
+.tool2{
+	width: 100%;
+	height: 50px;
+	float: left;
+	background:#Ffff;
+	display: none;
+}
+.complete{
+	width: 50px;
+	height: 100%;
+}
+.completeText {
+width: 112px;
+border: 0px;
+background: #FFFFFF;
+outline: none;
+position: relative;
+bottom: 20px;
+
+font-size: 12px;
+}
+.tool3{
+	width: 100%;
+	height: 30px;
+	top: 100%;
+	float: left;
+	display: none;
+}
+.list{
+	
+	width: 100%;
+	height: auto;
+	
+}
+.div4{
+	height: 100%;
+	float: left;
+}
+.clearComplete{
+position: relative;
+left:211px;
+bottom: 20px;
+width: 100px;
+border: 0px;
+height: auto;
+background: #FFFFFF;
+outline: none;
+font-size: 12px;
+
+}
+
+.clearComplete,.completeText{
+	color: #757373;
+	height: 20px;
+}
+.clearComplete:hover{
+	color: black;
+}
+.completeText:hover{
+	color: black;
+}
+.tasksleft{
+font-size: 12px;
+color: #757373;
+}
+.btn{
+height: 20px;
+color: #757373;
+width: auto;
+position: relative;
+left:240px;
+border: 0px;
+background: #FFFFFF;
+outline: none;
+font-size: 12px;
+}
+
+
+.item:hover{
+
+	background-color:skyblue;
+	color: black;
+}
+.close{
+	width: 50px;
+	float: right;
+}
+
+.value{
+    float: left;
+    width: 80%;
+    padding-top: 15px;
+    height: 50px;
+}
+.trach{
+    float: right;
+    width: 5%;
+    float: left;
+    height: 50px;
+}
+.item{
+    width: 100%;
+    height: 50px;
+}
+.check{
+    width: 10%;
+    float: left;
+    height: 50px;
+}
+.itemDel{
+    display: none;
+    
+}
+.del{
+    width: 10%;
+    float: left;
+    height: 50px;
+    background-color: red;
+    text-decoration: line-through;
+}
+.nur{
+    text-decoration: none;
+}
+.close {
+   padding: 0px 2px 1px 1px;
+   height: 100%;
+   font-size: 45px;
+   text-align: center;
+   color: red;
+  }
+  
+  .close:hover {
+    background-color: #f44336;
+    color: white;
+  }
+  li{
+    padding: 0px 0px 1px 10px;
+    height: 50px;
+    list-style: none;
+    font-size: 35px;
+    
+  }
+  ul li.checked {
+    background: rgb(148, 151, 147);
+    color: #fff;
+    text-decoration: line-through;
+  }
+  
+  /* Add a "checked" mark when clicked on */
+  ul li.checked::before {
+    content: '';
+    position: absolute;
+    border-color: rgb(95, 97, 95);
+    border-style: solid;
+    border-width: 0 2px 2px 0; 
+    left: 20px;
+    transform: rotate(45deg);
+    height: 15px;
+    width: 20px;
+  }
