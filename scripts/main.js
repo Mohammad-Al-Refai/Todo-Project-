@@ -16,7 +16,6 @@ let num = document.getElementById("num");
 var close = document.getElementsByClassName("close");
 let numItem = 0;
 let i = 0;
-
 let li;
 let Citems ; ////////////////////////100%
 let unitems ;///////////////////////tasks uncomplete
@@ -71,6 +70,10 @@ addButton.addEventListener("click", a => {
 function addItem() {
 	li = document.createElement("li");
 	li.setAttribute("class", "checked:before");
+	li.setAttribute("id", "item");
+	li.setAttribute("name", "item");
+
+
 	var inputValue = document.getElementById("text").value;
 	var t = document.createTextNode(inputValue);
 	li.appendChild(t);
@@ -80,7 +83,7 @@ function addItem() {
 
 	} else {
 	listU.appendChild(li);
-	
+
 	}
 	document.getElementById("text").value = "";
 
@@ -89,12 +92,10 @@ function addItem() {
 	span.className = "close";
 	span.appendChild(txt);
 	li.appendChild(span);
-
 	for (i = 0; i < close.length; i++) {
 		getUncomplet();
 		close[i].addEventListener("click",x=>{
-			
-			listU[i].parentNode.removeChild(listU[i]);
+			x.target.parentElement.remove();
 		});
 		
 			
@@ -178,7 +179,9 @@ function completeAll() {
 function Ccomplete() {
 	getCompleted();
 	for (let z = 0; z < Citems.length; z++) {
-	Citems[z].classList="checked:before";
+		getCompleted();
+
+		close[z].parentElement.remove();
 	}
 		
 	}
