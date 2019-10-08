@@ -218,7 +218,7 @@ font-size: 12px;
     
   }
   ul li.checked {
-    background: rgb(148, 151, 147);
+    background: rgb(57, 223, 2);
     color: #fff;
     text-decoration: line-through;
   }
@@ -227,7 +227,7 @@ font-size: 12px;
   ul li.checked::before {
     content: '';
     position: absolute;
-    border-color: rgb(95, 97, 95);
+    border-color: rgb(6, 238, 6);
     border-style: solid;
     border-width: 0 2px 2px 0; 
     left: 20px;

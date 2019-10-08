@@ -60,7 +60,6 @@ text.addEventListener("keyup", n => {
 addButton.addEventListener("click", a => {
 	if (text.value == "") { } else {
 		getCompleted();
-		getUnCompleted();
 		addItem();
 		show();
 		
@@ -96,6 +95,10 @@ function addItem() {
 		getUncomplet();
 		close[i].addEventListener("click",x=>{
 			x.target.parentElement.remove();
+			num.innerHTML=unitems.length;
+			if(unitems.length+Citems.length==0){
+				hide();
+			}
 		});
 		
 			
@@ -119,10 +122,11 @@ listU.addEventListener('click', function (ev) {
 		ev.target.classList.toggle('checked');
 		check = ev.target.classList.toggle("checked:before");
 		if (check == true) {
-		
+		num.innerHTML=unitems.length;
 		} else {
 			
-		
+			num.innerHTML=unitems.length;
+
 			
 			
 
@@ -135,7 +139,8 @@ listC.addEventListener('click', function (ev) {
 		ev.target.classList.toggle('checked');
 		check = ev.target.classList.toggle("checked:before");
 		if (check == true) {
-			
+			num.innerHTML=unitems.length;
+
 			getCompleted();
 			getCompleted();
 			getUncomplet();
@@ -144,7 +149,8 @@ listC.addEventListener('click', function (ev) {
 			
 			
 		} else {
-			
+			num.innerHTML=unitems.length;
+
 			getUncomplet();
 			getUncomplet();
 			getCompleted();
@@ -172,7 +178,8 @@ function completeAll() {
 		
 
 		unitems[z].attributes.class.value="checked";
-		
+		num.innerHTML=unitems.length;
+      
 		}
 
 }
@@ -182,6 +189,10 @@ function Ccomplete() {
 		getCompleted();
 
 		close[z].parentElement.remove();
+		num.innerHTML=unitems.length;
+        if(unitems.length+Citems.length==0){
+			hide();
+		}
 	}
 		
 	}
@@ -189,7 +200,7 @@ function getUncomplet(){
 	unitems=document.getElementsByClassName("checked:before");
 	for(let s=0;s<unitems.length;s++){
 	listU.appendChild(unitems[s]);
-	
+
 	}
 	
 num.innerHTML=unitems.length;
